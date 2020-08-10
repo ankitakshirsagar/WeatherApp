@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9 offset-md-1 search">
+      <input id="search-box" type="input" #city placeholder="Enter City..." class="form-control form-control-underlined"
+        (keydown.enter)="onSubmit(city)" />
+    </div>
+    <div class="col-md-9 offset-md-1" *ngFor="
+          let result of weatherData">
+      <app-result [data]="result"></app-result>
+    </div>
+  </div>
+</div>
